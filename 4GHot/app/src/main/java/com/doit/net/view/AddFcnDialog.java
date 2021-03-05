@@ -100,11 +100,10 @@ public class AddFcnDialog extends Dialog {
                     return;
                 }
 
-                if (!FormatUtils.getInstance().matchFCN(plmn)) {
-                    ToastUtils.showMessage("制式格式输入有误,请检查");
+                if (!FormatUtils.getInstance().plmnRange(plmn)) {
+                    ToastUtils.showMessage("plmn格式输入有误,请检查");
                     return;
                 }
-
 
                 if (TextUtils.isEmpty(fcn1) || TextUtils.isEmpty(fcn2) || TextUtils.isEmpty(fcn3)){
                     ToastUtils.showMessage("请输入3个频点");
